@@ -1,0 +1,1232 @@
+/* ****************************** global **************************** */
+* , *:before , *:after 
+{
+    -webkit-box-sizing: border-box ;
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+}
+body
+{
+    font-family: Tahoma , Arial ;
+}
+.container
+{
+    width: 80%;
+    height: auto ;
+    overflow: hidden ;
+    margin: 20px auto ;
+/*    border: 2px solid #0ff ;        */
+}
+/* ///////////////////////////////////////// home section ///////////////////////////////////////// */
+.home
+{
+    width: 100% ;
+    height: auto;
+    overflow: hidden ;
+    background-image: url("../images/slide-1-fs.jpg") ;
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center center ; 
+/*    border: 2px solid #f00 ;    */
+} 
+/* --------------------------------- navbar section ------------------------------- */
+.home     .navbar
+{
+    position: relative ;
+    width: 100% ;
+    height: auto ;
+    overflow: hidden;
+    margin: 0px   auto ;
+    z-index: 999 ;
+/*    border: 2px solid #00f ;     */
+}
+/* /////////////// logo part  ///////////////  */
+.home      .navbar   .logo   
+{
+    float: left ;
+    width: 18% ;
+    margin-right: 2% ;
+    text-align: left ;
+    height: auto ;
+    overflow: hidden ;
+/*    border: 2px solid #0ff ;    */
+}
+.home    .navbar   .logo   .logoH3
+{
+    text-transform: uppercase ;
+    font-size: 25px;   
+    color: #eee ;
+}
+/* /////////////// links part  /////////////// */
+.home   .navbar    .links
+{
+    width: 78%;
+    float: right ;
+    margin-left: 2%;
+    text-align: right ; 
+    height: auto ;
+    overflow: hidden ;
+    padding: 2px ;
+/*    border: 2px solid #f0f ;    */
+}
+.home   .navbar   .container    .links      ul
+{
+    list-style: none ;
+}
+.home   .navbar  .container      .links      ul      li
+{
+    display: inline-block ;
+    padding-left: 15px ;
+    padding-top: 4px ;
+    padding-bottom: 3px ;
+}
+.home   .navbar     .container      .links      ul      li      a
+{
+    text-decoration: none ;
+    color: #ddd ;
+    text-transform: uppercase ;
+    font-size: 15px ;
+    transition: all 0.5s ease-in-out ;
+}
+.home    .navbar    .container      .links      ul      li      a.active    ,
+.home    .navbar    .container      .links      ul      li      a:hover
+{
+    color: #fff ;
+}
+
+/*  ################ menubar icons ############ */
+/* ----------------------- menubar icon  ----------------------------- */
+.home   .navbar     input
+{
+	position: absolute ;
+	top: 10px ;
+	right: 15px ;
+	display: none ;
+}
+.home   .navbar     .menubarLabel
+{
+	position: absolute;
+	top : 10px; 
+	right: 15px ;
+/*	border: 2px solid #ff0;*/
+	cursor: pointer;
+	/* from  "0px" to "970px" في الشاشات المحمول  */
+	display: none ;  
+}
+.menubarLabel .menubarDiv1  ,
+.menubarLabel .menubarDiv2  ,
+.menubarLabel .menubarDiv3  
+{
+	margin: 6px;
+	width: 40px;
+	height: 4px;
+	padding: 1px;
+	background-color: #fff ;
+	/* smooth يحصل التحول بشكل x الي علامة ال menubar icon عشان لما يحصل تحويل لل */
+	transition: 0.4s ;
+}
+input:checked ~  .menubarLabel .menubarDiv1  
+{
+	transform: rotate(-45deg) translate(-6px, 8px) ;
+}
+input:checked ~  .menubarLabel .menubarDiv2 
+{
+	opacity: 0 ;
+}
+input:checked ~  .menubarLabel .menubarDiv3  
+{
+	transform: rotate(45deg) translate(-6px, -8px) ;
+}
+input:checked ~ .links
+{
+	display: block ;
+}
+/* --------------------------------- Media Query : navbar section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+   /*  /////////////////// left part : navbar logo /////////////////// */
+	.home    .navbar     .container      .logo    ,
+	/*  /////////////////// right part : navbar links /////////////////// */
+	.home    .navbar     .container      .links
+	{
+		width: 100% ;
+		float: none;
+	}
+	/*  /////////////////// right part : navbar links /////////////////// */
+	.home    .navbar     .container      .links
+	{
+		display: none ; 
+	}
+	/*  /////////////////// right part : navbar links /////////////////// */
+	.home    .navbar     .container      .links   ul  	li
+	{
+		width: 100% ;
+		text-align: center ;
+        margin: 10px 0 ;
+	}
+	/* /////////////////// menubar icon of navbar /////////////////// */
+	.home    .navbar     .container       .menubarLabel
+	{
+		display: block ;
+	}
+	/* hover اللي هعمل عليه  <li></li> بتاع ال <a></a> هينفذ هذا الكلام علي ال */
+	.home    .navbar     .container    .links    ul    	li:hover   
+	{
+		color: gold ;
+		border: 0 ;
+		background-color: transparent ;
+	}
+	/*  .active اللي وخده كلاس اسمه <li></li>  هينفذ هذا الكلام علي ال */
+	.home    .navbar     .container    .links     ul	li.active  
+	{
+		background-color: transparent ;
+		border-bottom: 0 ;
+	}
+	/* //////////////// menubar icon هظهر ال //////////////// */
+	.home    .navbar   .menubar
+	{
+		display: block ;
+	}
+    
+}
+/* --------------------------------------- header section --------------------------------------- */
+.home       .header
+{
+    width: 100%;
+    height: auto ;
+    overflow: hidden ;    
+}
+.home       .header     .headerContainer
+{
+    float: left ;
+    width: 500px ;
+    height: auto ;
+    margin: 120px auto ;
+/*    border: 2px solid #ff0 ;     */
+}
+.home       .header     .container    .headerH3
+{
+    font-size: 50px ;
+    color: #fff ;
+    text-transform: capitalize ;
+    line-height: 1.2 ;
+    font-weight: normal;
+    letter-spacing: 5px ;
+}
+.home       .header     .headerContainer    .headerPara
+{
+    color: #ccc ;
+    margin-top: 30px; 
+    cursor: pointer ;
+}
+.home       .header     .headerContainer    .headerPara     .headerSpan
+{
+    transition: all 0.5s ease-in-out ;
+}
+/* 360deg للشرطتين بمقدار rotate لما احط الفارة علي النص هيقوم بعمل */
+.home       .header     .headerContainer    .headerPara:hover    .headerSpan
+{
+    display: inline-block ;
+    transform: rotate(360deg);   
+}
+/* ///////////////////////////////////////// about section ///////////////////////////////////////// */
+.about
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+/*    border: 2px solid #f0f ;        */
+}
+.about  .container
+{
+    margin: 60px auto ;
+}
+/* -------------------- about : common properities of 3 boxes -------------------- */
+.about      .aboutBox1  ,
+.about      .aboutBox2  ,
+.about      .aboutBox3
+{
+    float: left ;
+    width: 31.3333%;
+    height: auto ;
+    overflow: hidden ;
+}
+.about      .aboutBox1  
+{
+    margin-left: 0 ;
+    margin-right: 2% ;
+}
+.about      .aboutBox2
+{
+    margin-left: 1% ;
+    margin-right: 1% ;
+}
+.about      .aboutBox3
+{
+    margin-left: 2% ;
+    margin-right: 0 ;
+}
+/* ################ about : box 1 ################ */
+.about      .aboutBox1      .aboutBox1H3
+{
+    font-size: 45px ;
+    text-transform: capitalize; 
+    margin: 20px 0 ;
+    font-weight: normal ;
+    color: #444 ;
+}
+.about      .aboutBox1      .aboutBox1Para1
+{
+    margin: 20px 0 ;
+    line-height: 1.6 ;
+    font-size: 16px ;
+    color: #888 ;
+}
+.about      .aboutBox1      .aboutBox1Para1     .aboutBox1Para1Span
+{
+    color: #333 ;  
+    font-weight: bold ;
+}
+.about      .aboutBox1      .aboutBox1Para2   
+{
+    margin: 20px 0 ;
+    line-height: 1.6 ;
+    font-size: 14px ;
+    color: #ccc ;   
+}
+.about      .aboutBox1      .aboutBox1Btn
+{
+    text-transform: capitalize ;
+    color: #555 ;
+    font-size: 14px ;
+    margin: 20px 0 ;
+    background-color: transparent ;
+    border: 0 ;
+    outline: 0 ;
+    cursor: pointer ;
+}
+.about      .aboutBox1      .aboutBox1Btn   .aboutBox1BtnSpan
+{
+    transition: all 0.5s ease-in-out ;
+}
+.about      .aboutBox1      .aboutBox1Btn:hover   .aboutBox1BtnSpan   
+{
+    display: inline-block ;
+    transform: rotate(360deg);
+}
+/* ################ about : box 2 ################ */
+/* ################ about : box 3 ###############  */
+/* ////// aboutBox2 : image part  ////////// */
+.about  .aboutBox2  .aboutBox2Img   ,
+.about  .aboutBox3  .aboutBox3Img
+{
+    position: relative ;
+    display: block ;
+    height: 230px ;
+    /*  موجودة فيه image اللي ال box متخرجش بره حدود ال image لل scale عشان لما اعمل  */
+    overflow: hidden ;
+    margin: 20px 0 ;
+}
+.about  .aboutBox2  .aboutBox2Img   .aboutBox2ImgOverlay  ,
+.about  .aboutBox3  .aboutBox3Img   .aboutBox3ImgOverlay
+{
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0 ;
+    transition: all 0.5s ease-in-out ;
+}
+.about  .aboutBox2  .aboutBox2Img   img     ,
+.about  .aboutBox3  .aboutBox3Img   img
+{
+    width: 100% ;
+    height: 100%  ;
+    transition: all 0.5s ease-in-out ;
+}
+.about  .aboutBox2  .aboutBox2Img:hover   img     ,
+.about  .aboutBox3  .aboutBox3Img:hover   img
+{
+    transform: scale(1.5);
+}
+.about  .aboutBox2  .aboutBox2Img:hover   .aboutBox2ImgOverlay ,
+.about  .aboutBox3  .aboutBox3Img:hover   .aboutBox3ImgOverlay 
+{
+    opacity:1 ;
+}
+/* ////// aboutBox2 : info part ////////// */
+.about  .aboutBox2  .aboutBox2Info      ,
+.about  .aboutBox3  .aboutBox3Info  
+{
+    display: block ;
+}
+.about  .aboutBox2  .aboutBox2Info  .aboutBox2InfoH4    ,
+.about  .aboutBox3  .aboutBox3Info  .aboutBox3InfoH4
+{
+    font-size: 20px ;
+    text-transform: capitalize ;
+    color: #555 ;
+    margin: 10px 0 ;
+}
+.about  .aboutBox2  .aboutBox2Info  .aboutBox2InfoPara  ,
+.about  .aboutBox3  .aboutBox3Info  .aboutBox3InfoPara
+{
+    font-size: 14px ;
+    line-height: 1.8 ; 
+    color: #aaa ;
+}
+/* --------------------------------- Media Query : navbar section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+    /* -------------------- about : common properities of 3 boxes -------------------- */
+    .about      .aboutBox1  ,
+    .about      .aboutBox2  ,
+    .about      .aboutBox3
+    {
+        float: none ;
+        width: 90%;
+        margin: 10px auto ;
+        height: auto ;
+        overflow: hidden ;
+    }
+}
+/* ///////////////////////////////////////// folio section ///////////////////////////////////////// */
+.folio
+{
+    width:100%;
+    height: 500px ;
+    overflow: hidden ;
+    background-image: url("../images/slide-7-fw.jpg");
+    background-repeat: no-repeat ;
+    background-position: center center ;
+    background-size: cover ;
+    background-attachment: fixed ;  
+/*    border: 2px solid #f00 ;    */
+}
+.folio  .folioContainer
+{
+    display: block ;
+    width: 80% ;
+    height: auto ;
+    overflow: hidden ;
+    margin: 180px auto ;
+    text-align: center ;
+    padding: 20px ;
+/*    border: 2px solid #00f ;    */
+}
+.folio      .folioContainer     .folioH4
+{
+    color: #eee ;
+    margin-bottom: 15px ;
+    text-transform: capitalize ;
+}
+.folio      .folioContainer     .folioPara1 ,
+.folio      .folioContainer     .folioPara2
+{
+    color: #fff ;
+    line-height: 1.6 ;
+    font-size: 18px ;
+    text-transform: capitalize ;
+}
+.folio      .folioContainer     .folioPara2
+{
+    display: none ;
+}
+.folio      .folioContainer     .folioSpan
+{
+    display: block ;
+    color: #eee ;
+    margin: 16px 0 ;
+    text-transform: capitalize ;
+    font-style: italic ;
+}
+.folio      .folioContainer        .firstAuthor     ,
+.folio      .folioContainer        .secondAuthor
+{
+    padding: 10px ;
+    cursor: pointer ;
+    outline: 0 ;
+    text-transform: capitalize ;
+    background-color: transparent ;
+    border: 1px solid #ccc ;
+    margin: 10px ;
+    color: #fff ;
+    font-size: 17px ;
+    transition: all 0.5s ease-in-out ;
+}
+.folio      .folioContainer        .firstAuthor:hover
+{
+    background-color: brown ;
+    border: 1px solid   brown ;
+}
+.folio      .folioContainer        .secondAuthor:hover
+{
+    background-color: black ;
+    border: 1px solid   black ;
+}
+/* --------------------------------- Media Query : navbar section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+    .folio
+    {
+        height: 350px ;
+    }
+    .folio  .folioContainer
+    {
+        margin: 50px auto ;
+    }
+    .folio      .folioContainer     .folioPara1 ,
+    .folio      .folioContainer     .folioPara2
+    {
+        line-height: 1.9 ;
+        font-size: 16px ;
+    }   
+}
+/* ///////////////////////////////////////// solutions section ///////////////////////////////////////// */
+.solutions
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+    padding: 50px 0 ;   
+}
+/* ****************** solutions : left part ****************** */
+.solutions      .solutionsLeft
+{
+    width: 48% ;
+    float: left;
+    margin-left: 0 ;
+    margin-right: 2% ;    
+}
+.solutions      .solutionsLeft      .solutionsLeftH3
+{
+    font-size: 40px ;
+    text-transform: capitalize ;
+    font-weight: normal ;
+}
+.solutions      .solutionsLeft      .solutionsLeftPara1
+{
+    font-size: 18px ;
+    margin: 20px 0 ; 
+    color: #555 ;
+    line-height: 1.6 ;
+}
+.solutions      .solutionsLeft      .solutionsLeftPara2
+{
+    font-size: 14px ;
+/*    margin: 20px 0 ; */
+    color: #aaa ;
+    line-height: 1.9 ;
+}
+.solutions      .solutionsLeft      .solutionsLeftBtn
+{
+    width: 90px; 
+    height: 40px ;
+    cursor: pointer ;
+    text-transform: capitalize ;
+    background-color: transparent ;
+    border: 0  ; 
+    color: #555 ;
+    margin: 20px 0 ;
+}
+.solutions      .solutionsLeft      .solutionsLeftBtn            .solutionsLeftBtnSpan
+{
+    transition:  0.5s ease-in-out ;
+}
+.solutions      .solutionsLeft      .solutionsLeftBtn:hover       .solutionsLeftBtnSpan
+{
+    /* عشان لما اشيل ايدي من علي الفارة السبام متتحركش تاني */
+    display: inline-block; 
+    transform: rotate(360deg);
+}
+/* ****************** solutions : right part ****************** */
+.solutions      .solutionsRightAccordin    
+{
+    width: 48% ;
+    float: right ;
+    margin-left: 2%;
+    margin-right: 0 ;
+/*  border: 2px solid #f00 ;*/
+}
+.solutions    .solutionsRightAccordin     h3
+{
+    text-transform: capitalize ;
+    color: #eee ;
+    padding: 10px ;
+    cursor: pointer ;
+    background-color: #444 ;
+    border-bottom: 3px solid #fff ;
+}
+.solutions      .solutionsRightAccordin     p
+{
+    color: #555 ;
+    line-height: 1.8 ;
+    font-size: 14px ;
+    padding: 10px ;
+    background-color: #ddd ;
+    display: none ;
+}
+/* هخلي اول نص فقط هو اللي ظاهر وهخفي الباقي */
+.solutions      .solutionsRightAccordin     p.accordinPara1
+{
+    display: block ;
+}
+/* --------------------------------- Media Query : navbar section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+    /* ****************** solutions : left part  ****************** */
+    /* ****************** solutions : right part ****************** */
+    .solutions      .solutionsLeft              ,
+    .solutions      .solutionsRightAccordin
+    {
+        width: 90% ;
+        float: none;
+        margin: 10px  auto ;    
+    }
+    .solutions      .solutionsLeft      .solutionsLeftPara1
+    {
+        font-size: 16px ;
+        line-height: 1.6 ;
+    }
+}
+/* ///////////////////////////////////////// caseStudy section ///////////////////////////////////////// */
+.caseStudy  
+{
+    width: 100% ;
+    height: auto;
+    overflow:  hidden ;
+/*    border: 2px solid #f00 ;        */
+}
+/* ####################### left part : caseStudy info ####################### */
+.caseStudy      .caseStudyInfo
+{
+    width: 50% ;
+    height: 400px ; 
+    float: left ;
+    color: #fff ;
+    background-color: #e62739 ;
+    padding: 80px ;
+}
+.caseStudy      .caseStudyInfo      .caseStudyInfoH4
+{
+    font-size: 20px ;
+    text-transform: capitalize ;
+    font-weight: normal ;
+    margin: 20px auto ;
+}
+.caseStudy      .caseStudyInfo      .caseStudyInfoPara1 ,
+.caseStudy      .caseStudyInfo      .caseStudyInfoPara2
+{
+    font-size: 15px ;
+    line-height: 1.5 ;
+    margin-bottom: 20px ;
+    letter-spacing: 0.5px ;
+}
+.caseStudy      .caseStudyInfo      .caseStudyInfoBtn
+{
+    background-color: transparent ;
+    border: 0 ;
+    color: #fff ;
+    text-transform: capitalize ;
+    cursor: pointer ;
+    margin-top: 20px ;
+}
+.caseStudy      .caseStudyInfo      .caseStudyInfoBtn      .caseStudyInfoBtnSpan
+{
+    transition: 0.5s ease-in-out ;
+}
+.caseStudy      .caseStudyInfo      .caseStudyInfoBtn:hover      .caseStudyInfoBtnSpan
+{
+    display: inline-block ;
+    transform: rotate(360deg);
+}
+/* ####################### right part : caseStudy image #######################  */
+.caseStudy      .caseStudyImage
+{
+    width: 50% ;
+    height: 400px ;
+    float: right ;
+    margin: 0 ;
+    background-image: url("../images/recentImg6.jpg");
+    background-position: top center ;
+    background-repeat: no-repeat ;
+    background-size: cover ;
+}
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent
+{
+    height: auto ;
+    overflow:  hidden ;
+    text-align: center ;
+    padding: 120px  0 ;
+    color: #fff ;
+/*    border: 2px solid #00f ;    */
+}
+/* ---------------- left part  ---------------- */
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentLeft
+{
+    width: 48% ;
+    height: auto ;
+    float: left ;
+    margin-left: 0 ;
+    margin-right: 2% ;
+/*    border: 2px solid #f0f ;    */
+}
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentLeft        p       ,    
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentRight       p       
+{
+    margin: 5px 0 ;
+    font-size: 40px ;
+}
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentLeft        span       ,    
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentRight       span       
+{
+    display: block ;
+    font-size: 12px ;
+    text-transform: uppercase ;
+    margin-bottom: 20px ;
+    font-weight: bold ;
+}
+/* ---------------- right part  ---------------- */
+.caseStudy      .caseStudyImage     .caseStudyInfoPercent       .percentRight
+{
+    width: 48% ;
+    float: right;
+    margin-left: 2% ;
+    margin-right: 0 ;
+/*    border: 2px solid #ff0 ;    */
+}
+/* --------------------------------- Media Query : navbar section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+    /* ####################### left part : caseStudy info ####################### */
+    /* ###################### right part : caseStudy image #####################  */
+    .caseStudy      .caseStudyInfo   ,
+    .caseStudy      .caseStudyImage
+    {
+        width: 100% ;
+        float: none ;
+    } 
+}
+/* ///////////////////////////////////////// recentWork section ////////////////////////////////////// */
+.recentWork
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+/*    border: 2px solid #00f ;    */
+}
+.recentWork     .recentWorkH3
+{
+    font-size: 35px ;
+    text-align: center ;
+    text-transform: capitalize ;
+    margin-top: 60px ;
+    margin-bottom: 20px ;
+    
+}
+.recentWork      ul
+{
+    list-style: none ;
+    text-align: center ;
+    margin-bottom: 20px ;
+}
+.recentWork      ul     li
+{
+    display: inline-block ;
+    margin: 10px ;
+}
+.recentWork      ul     li      span
+{
+    text-decoration: none ;
+    color:#555 ;
+    text-transform: capitalize ;
+    font-size: 16px ;
+    cursor: pointer ;
+}
+.recentWork      ul     li      span.active
+{
+    color: #111 ;
+}
+/* ************************************** recentWork section : recentWorkGallery ********************************* */
+.recentWork     .recentWorkGallery
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+/*    border: 2px solid #ff0 ;*/
+}
+/* ################## recentWork section : recentWorkGallery : left part ################## */
+.recentWork     .recentWorkGallery      .galleryLeft
+{
+    width: 50% ;
+    float: left ;   
+/*    border: 2px solid #f00 ;*/
+}
+.recentWork     .recentWorkGallery    .galleryLeft    img
+{
+    width: 100% ;
+    margin-top: -3px; 
+}
+/* **** recentWork section : recentWorkGallery : left part : column 1  **** */
+.recentWork     .recentWorkGallery    .galleryLeft     .galleryLeftCol1
+{
+    width: 50% ;
+    float: left ;
+/*    border: 2px solid #00f ;*/
+}
+/* **** recentWork section : recentWorkGallery : left part : column 2  **** */
+.recentWork     .recentWorkGallery    .galleryLeft     .galleryLeftCol2
+{
+    width: 50% ;
+    float: right;
+/*    border: 2px solid #f0f ; */
+}
+/* ################## recentWork section : right part ################## */
+.recentWork     .recentWorkGallery    .galleryRight 
+{
+    width: 50% ;
+    float: right;
+/*    border: 2px solid #f0f ;*/
+}
+.recentWork     .recentWorkGallery    .galleryRight    img 
+{
+    width: 100% ;
+    margin-top: -3px; 
+}
+/*  ********* right part : row 1  ********* */
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1
+{
+    position: relative ;
+    width: 100% ;
+/*     border: 2px solid #0ff ; */
+}
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1    .galleryRightRow1Img   .galleryRightRow1ImgInfoOvelay
+{
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    background-color: rgba(0,0,0,0.6);
+}
+/* ********* right part : row 1 : img info *********   */
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1   .galleryRightRow1ImgInfo
+{
+    position: absolute ;
+    top: 45% ;
+    left: 45% ;
+    transform: translate(-45% , -45%);
+}
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1   .galleryRightRow1ImgInfo    p
+{
+    font-size: 18px ;
+    color: #ddd ;
+    line-height: 1.3 ;
+    letter-spacing: 1.5px ;
+}
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1   .galleryRightRow1ImgInfo    span
+{
+    display: block ;
+    margin-top: 50px; 
+    color: rgba(255,255,255,0.5);
+    text-transform: capitalize ;
+    cursor: pointer ;
+}
+/*  ********* right part : row 2  ********* */
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow2
+{
+    width: 100% ;
+/*    border: 2px solid #f0f ; */
+}
+/* ---- right part : row 2 : col 1 ----- */
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow2   .galleryRightRow2Col1
+{
+    width: 50% ;
+    float: left ;
+}
+/* --- right part : row 2 : col 2 ------ */
+.recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow2    .galleryRightRow2Col2
+{
+    width: 50% ;
+    float: right;   
+}
+/* ---------------------------------------- mixlitUp library -------------------------------- */
+.mix
+{
+    display: none ;
+}
+/* --------------------------------- Media Query : recentWork section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:750px)
+{
+    /*  paragraph above image   */
+    .recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1   .galleryRightRow1ImgInfo    p
+    {
+        font-size: 14px ;
+    }
+    /*  span above image   */
+    .recentWork     .recentWorkGallery    .galleryRight     .galleryRightRow1   .galleryRightRow1ImgInfo    span
+    {
+        margin-top: 10px; 
+        font-size: 12px ;
+    }
+}
+/* ///////////////////////////////////////// clients section ///////////////////////////////////////// */
+.clients
+{
+    width: 100% ;
+    height: auto;
+    overflow: hidden ;
+    padding: 50px 0 ;
+    background-color: rgb(142,102,187);
+    color: #fff ;
+    margin-top: -3px ;
+/*    border: 2px solid #0f0 ;    */
+}
+.clients    .clientsContainer
+{
+    width: 85% ;
+    margin: 20px  auto ;
+}
+/* ---------------- column 1 ---------------- */
+.clients       .clientsCol1 , 
+.clients       .clientsCol2 ,
+.clients       .clientsCol3 ,
+.clients       .clientsCol4 , 
+.clients       .clientsCol5
+{
+    float: left ;
+    width: 20% ;
+} 
+/* ############################# clients H3 ############################# */
+.clients       .clientsCol1     .clientsCol1H3  
+{
+    font-size: 25px ;
+    margin-top: 20px ;
+}
+/* ---------------- column 2 ---------------- */    
+.clients       .clientsCol2     .clientsCol2FirstH3   , 
+.clients       .clientsCol2     .clientsCol2SecondH3  ,  
+/* ---------------- column 3 ---------------- */
+.clients       .clientsCol3     .clientsCol3FirstH3   ,
+.clients       .clientsCol3     .clientsCol3SecondH3  ,  
+/* ---------------- column 4 ---------------- */
+.clients       .clientsCol4     .clientsCol4FirstH3   ,
+.clients       .clientsCol4     .clientsCol4SecondH3  ,  
+/* ---------------- column 5 ---------------- */
+.clients       .clientsCol5     .clientsCol5FirstH3   ,
+.clients       .clientsCol5     .clientsCol5SecondH3    
+{
+    text-transform: capitalize ;
+    font-size: 20px ;
+    margin-top: 20px ;
+    font-weight: normal ;
+}
+/* ############################# clients span ############################# */
+/* ---------------- column 2 ---------------- */    
+.clients       .clientsCol2     .clientsCol2FirstSpan   ,
+.clients       .clientsCol2     .clientsCol2SecondSpan  ,  
+/* ---------------- column 3 ---------------- */
+.clients       .clientsCol3     .clientsCol3FirstSpan   ,
+.clients       .clientsCol3     .clientsCol3SecondSpan  ,  
+/* ---------------- column 4 ---------------- */
+.clients       .clientsCol4     .clientsCol4FirstSpan   ,
+.clients       .clientsCol4     .clientsCol4SecondSpan  ,  
+/* ---------------- column 5 ---------------- */
+.clients       .clientsCol5     .clientsCol5FirstSpan   ,
+.clients       .clientsCol5     .clientsCol5SecondSpan    
+{
+    display: block ;
+    text-transform: capitalize ;
+    font-size: 14px ;
+    margin-top: 10px ;
+    color: #eee ;
+}
+/* --------------------------------- Media Query : clients section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:920px)
+{
+    /* ---------------- column 1 ---------------- */
+    .clients       .clientsCol1 , 
+    .clients       .clientsCol2 ,
+    .clients       .clientsCol3 ,
+    .clients       .clientsCol4 , 
+    .clients       .clientsCol5
+    {
+        float: none ;
+        width: 100% ;
+    } 
+    /* ############################# clients H3 ############################# */
+    .clients       .clientsCol1     .clientsCol1H3  
+    {
+        font-size: 30px ;
+        margin: 30px  0 ;
+        text-transform: capitalize ;
+    }
+    /* ---------------- column 2 ---------------- */    
+    .clients       .clientsCol2     .clientsCol2FirstH3   , 
+    .clients       .clientsCol2     .clientsCol2SecondH3  ,  
+    /* ---------------- column 3 ---------------- */
+    .clients       .clientsCol3     .clientsCol3FirstH3   ,
+    .clients       .clientsCol3     .clientsCol3SecondH3  ,  
+    /* ---------------- column 4 ---------------- */
+    .clients       .clientsCol4     .clientsCol4FirstH3   ,
+    .clients       .clientsCol4     .clientsCol4SecondH3  ,  
+    /* ---------------- column 5 ---------------- */
+    .clients       .clientsCol5     .clientsCol5FirstH3   ,
+    .clients       .clientsCol5     .clientsCol5SecondH3    
+    {
+        font-size: 18px ;
+        margin: 15px 0 ;
+    }
+    /* ---------------- column 2 ---------------- */    
+    .clients       .clientsCol2     .clientsCol2FirstSpan   ,
+    .clients       .clientsCol2     .clientsCol2SecondSpan  ,  
+    /* ---------------- column 3 ---------------- */
+    .clients       .clientsCol3     .clientsCol3FirstSpan   ,
+    .clients       .clientsCol3     .clientsCol3SecondSpan  ,  
+    /* ---------------- column 4 ---------------- */
+    .clients       .clientsCol4     .clientsCol4FirstSpan   ,
+    .clients       .clientsCol4     .clientsCol4SecondSpan  ,  
+    /* ---------------- column 5 ---------------- */
+    .clients       .clientsCol5     .clientsCol5FirstSpan   ,
+    .clients       .clientsCol5     .clientsCol5SecondSpan    
+    {
+        font-size: 14px ;
+        margin: 15px  0 ;
+        color: #ddd ;
+    }
+}
+/* ///////////////////////////////////////// footer section ///////////////////////////////////////// */
+.footer
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+    background-color: rgb(24,24,23);
+/*    border: 2px solid #0ff; */
+}
+.footer     .footerContainer
+{
+    width: 85% ;
+    height: auto ;
+    overflow: hidden ;
+    margin: 20px auto ;
+/*    border: 2px solid #f0f;   */
+}
+/* -------------------- column 1 , column 2 , column 3 , column 4 -------------------- */
+.footer     .footerContainer    .footerCol
+{
+    width: 25% ;
+    float: left ;
+}
+/* ----------------- column 1 : brand name  ------------------ */
+.footer     .footerContainer    .footerCol     .footerBrandH3
+{   
+    font-size: 25px ;
+    text-transform: uppercase ;
+    color: #fff ;
+}
+/* -------------------- column 2 -------------------- */
+/* -------------------- column 2 H3 , column 3 H3 , column 4     H3  -------------------- */
+.footer     .footerContainer    .footerCol     .footerColH3
+{
+    font-size: 18px ;
+    text-transform: capitalize ;
+    font-weight: bold ;
+    margin-bottom: 20px ;
+    color: #fff ;
+    font-weight: normal ;
+}
+/* -------------------- column 2 Span container , column 3 Span container -------------------- */
+.footer     .footerContainer    .footerCol      .footerColSpanContainer
+{
+    margin-bottom: 20px;    
+}
+/* -------------------- column 2 Span  -------------------- */
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan ,
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan ,
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan ,
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan ,
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan ,
+.footer     .footerContainer    .footerCol    .footerColSpanContainer    .footerColSpan 
+{
+    display: block;
+    margin: 6px 0  ;
+    text-transform: capitalize ;
+    color: rgb(88,88,87) ;
+    font-size: 14px ;
+}
+/* --------------------  column 3 Span -------------------- */
+.footer     .footerContainer    .footerCol     .footerColSpan ,
+.footer     .footerContainer    .footerCol     .footerColSpan ,
+.footer     .footerContainer    .footerCol     .footerColSpan ,
+.footer     .footerContainer    .footerCol     .footerColSpan ,
+.footer     .footerContainer    .footerCol     .footerColSpan ,
+.footer     .footerContainer    .footerCol     .footerColSpan 
+{
+    display: block;
+    margin: 12px 0  ;
+    text-transform: capitalize ;
+    color: rgb(88,88,87) ;
+    font-size: 14px ;
+}
+/* -------------------- column 3 -------------------- */
+.footer     .footerContainer    .footerCol    .footerColForm      input
+{
+    display: block ;
+    width: 100% ;
+    padding: 10px 0 ;
+    margin: 10px 0 ;
+    background-color: transparent ;
+    border: 0 ;
+    border-bottom: 1px solid #555 ;
+    color: #fff ;
+    outline: 0 ;
+    font-size: 14px ;
+}
+.footer     .footerContainer    .footerCol    .footerColForm      input::-webkit-input-placeholder
+{
+    text-transform: uppercase ;
+    font-size: 12px ;
+}
+.footer     .footerContainer    .footerCol    .footerColForm    .footerColSignUpBtn
+{
+    display: block ;
+    padding: 10px   13px;
+    background-color: transparent ;
+    color: #fff ;
+    text-transform: capitalize ;
+    cursor: pointer ;
+    margin-top: 20px ;
+    border-radius: 5px ;
+    font-size: 12px ;
+    transition: all 0.5s ease-in-out ;
+    border: 2px solid #555 ;
+}
+.footer     .footerContainer    .footerCol    .footerColForm      .footerColSignUpBtn:hover
+{
+    border: 2px solid #fff ;
+}
+.footer     .footerContainer    .footerCol    .footerColForm   .footerColFormSpan
+{
+    display: block ;
+    margin-top: 20px ;
+    color: #555 ; 
+    font-size: 14px ;   
+}
+/* --------------------------------- Media Query : footer section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:920px)
+{
+    /* ---------------- column 1 ---------------- */
+    .footer     .footerContainer    .footerCol
+    {
+        float: none ;
+        width: 100% ;
+        margin: 50px    0 ;
+    } 
+    /* ############################# clients H3 ############################# */
+    .clients       .clientsCol1     .clientsCol1H3  
+    {
+        font-size: 40px ;
+    }
+}
+/* ///////////////////////////////////////// second footer section ///////////////////////////////////////// */
+.footer2
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden ;
+    background-color: #000 ;
+    padding: 15px 0  ;
+/*    border: 2px solid #00f ;    */
+}
+.footer2    .footer2Container
+{
+    width: 85%; 
+    margin: 5px auto ;
+}
+/* -------- footer 2 :  left part ------------ */
+.footer2      .footer2LeftPart
+{
+    width: 50% ;
+    float: left ;
+    text-align: left ;
+}
+.footer2      .footer2LeftPart      ul
+{
+    list-style: none ;
+}
+.footer2      .footer2LeftPart      ul      li
+{
+    display: inline-block ;
+    color: #555 ;
+    margin: 10px ;
+}
+.footer2      .footer2LeftPart      ul      li      a
+{
+    text-decoration: none ;
+    color: #555 ;
+    text-transform: uppercase ;
+    font-size: 14px ;
+    margin-right: 5px ;
+}
+.footer2      .footer2LeftPart      ul      li      a      i
+{
+    color: #fff ;
+    margin-right: 5px ;
+}
+/* -------- footer 2 :  right part ------------ */
+.footer2      .footer2RightPart
+{
+    width: 50% ;
+    float: right;
+    text-align: right;   
+}
+.footer2      .footer2RightPart     a
+{
+    display: inline-block ;
+    text-decoration: none ;
+    color: #555 ;
+    padding:  8px 0 ;
+    text-transform: uppercase ;
+    font-size: 14px ;
+}
+.footer2      .footer2RightPart     a   span.hire
+{
+    color: #fff ;
+}
+.footer2      .footer2RightPart     a   span.hireConrad
+{
+    width: 5px ;
+    height: 5px ;
+    display: inline-block ;
+    border: 2px solid #f00 ;
+    border-radius: 50% ;
+    border: 0 ;
+    font-size: 50px ;
+    background-color: #fff ;
+    margin-bottom: 2px; 
+    margin-left: 5px ;
+    margin-right: 5px ;
+}
+/* --------------------------------- Media Query : footer2 section -------------------------------  */
+@media ( min-width:0px ) and ( max-width:920px)
+{
+    /* -------- footer 2 :  left part ------------ */
+    /* -------- footer 2 :  right part ------------ */
+    .footer2      .footer2LeftPart     ,
+    .footer2      .footer2RightPart 
+    {
+        width: 100% ;
+        float: none ;
+        margin: 10px  auto;
+        text-align: left ;
+    }
+    .footer2      .footer2RightPart 
+    {
+        margin-left: 15px;    
+    }
+}
